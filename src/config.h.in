@@ -1,0 +1,56 @@
+/*
+Copyright (c) 2016 Ryan L. Guy
+
+This software is provided 'as-is', without any express or implied
+warranty. In no event will the authors be held liable for any damages
+arising from the use of this software.
+
+Permission is granted to anyone to use this software for any purpose,
+including commercial applications, and to alter it and redistribute it
+freely, subject to the following restrictions:
+
+1. The origin of this software must not be misrepresented; you must not
+   claim that you wrote the original software. If you use this software
+   in a product, an acknowledgement in the product documentation would be
+   appreciated but is not required.
+2. Altered source versions must be plainly marked as such, and must not be
+   misrepresented as being the original software.
+3. This notice may not be removed or altered from any source distribution.
+*/
+#ifndef FLUIDSIM_CONFIG_H
+#define FLUIDSIM_CONFIG_H
+
+#define CONFIG_EXECUTABLE_DIR 	"@CONFIG_EXECUTABLE_DIR@"
+#define CONFIG_OUTPUT_DIR 		"@CONFIG_OUTPUT_DIR@"
+#define CONFIG_BAKEFILES_DIR 	"@CONFIG_BAKEFILES_DIR@"
+#define CONFIG_LOGS_DIR 		"@CONFIG_LOGS_DIR@"
+#define CONFIG_SAVESTATES_DIR 	"@CONFIG_SAVESTATES_DIR@"
+#define CONFIG_TEMP_DIR 	    "@CONFIG_TEMP_DIR@"
+
+#include <string>
+
+namespace Config {
+
+extern std::string executableDirectory;
+extern std::string outputDirectory;
+extern std::string bakefilesDirectory;
+extern std::string logsDirectory;
+extern std::string savestatesDirectory;
+extern std::string tempDirectory;
+    
+extern std::string getExecutableDirectory();
+extern std::string getOutputDirectory();
+extern std::string getBakefilesDirectory();
+extern std::string getLogsDirectory();
+extern std::string getSavestatesDirectory();
+extern std::string getTempDirectory();
+    
+extern void setOutputDirectory(std::string dir);
+extern void setBakefilesDirectory(std::string dir);
+extern void setLogsDirectory(std::string dir);
+extern void setSavestatesDirectory(std::string dir);
+extern void setTempDirectory(std::string dir);
+
+}
+
+#endif
